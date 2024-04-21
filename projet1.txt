@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int n = 6; // Nombre de chiffres à calculer
+    int first = 0, second = 1, next, i;
+    
+    printf("Les six premiers chiffres de la suite de Fibonacci sont :\n");
+
+    for (i = 0; i < n; i++) {
+        if (i <= 1)
+            next = i;
+        else {
+            next = first + second;
+            first = second;
+            second = next;
+        }
+        printf("%d ", next);
+    }
+
+    return 0;
+}
